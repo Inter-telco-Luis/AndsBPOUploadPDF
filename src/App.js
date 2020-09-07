@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+//import logo from './assets/images/inter-telco.png';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Datosjson from './components/Uploadfile/Datosjson';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const ViewDatos = ()=>(
+  <Datosjson />
+);
+
+class App extends Component {
+
+
+  render() {
+  
+    return (
+      
+      <Router>
+        <Switch>
+        <Route exact path="/" component={ViewDatos} />           
+        <Route path="*" component={() => "404 NOT FOUND"} /> 
+        </Switch>
+      </Router>
+    
+   );
+  }
 }
+
+
 
 export default App;
