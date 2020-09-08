@@ -76,13 +76,15 @@ class Datosjson extends Component {
               </Table.HeaderCell>
             </Table.Row>
             <Table.Body>
-            <div id="cont1">
-            {/* <a href="javascript:escribir()">Escribir</a> */}
-            {/* <a href="javascript:void(document.getElementById('cont1').innerHTML='ho ho');">Escribirww</a> */}
-            {/* {document.getElementById('cont1').innerHTML='ho ho'} */}
-              {/* <Input defaultValue={JSON.stringify(this.items)}/> */}
-              {JSON.stringify(items)}
-            </div>
+              <Table.Cell active>
+                <div id="cont1">
+                  {/* <a href="javascript:escribir()">Escribir</a> */}
+                  {/* <a href="javascript:void(document.getElementById('cont1').innerHTML='ho ho');">Escribirww</a> */}
+                  {/* {document.getElementById('cont1').innerHTML='ho ho'} */}
+                  {/* <Input defaultValue={JSON.stringify(this.items)}/> */}
+                  {JSON.stringify(items)}
+                </div>
+              </Table.Cell>
               {/* <div>{document.write(+items)}</div> */}
               {/* {window.onload = document.write(+items)} */}
               {/* {document.write(items)} */}
